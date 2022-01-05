@@ -104,7 +104,7 @@ namespace AccesoDatos
                 try
                 {
                     conexion.Open();
-                    string actualizar = "UPDATE personas SET apellido=@apellidos, nombre=@nombres, fechaNacimiento=@fechaNacimiento, peso=@peso WHERE cedula=@cedula";
+                    string actualizar = "UPDATE personas SET apellidos=@apellidos, nombres=@nombres, fechaNacimiento=@fechaNacimiento, peso=@peso WHERE cedula=@cedula";
                     SqlCommand cmd2 = new SqlCommand(actualizar, conexion);
                     cmd2.Parameters.AddWithValue("@cedula", this.txtCedula.Text);
                     cmd2.Parameters.AddWithValue("@apellidos", this.txtApellido.Text);
