@@ -50,7 +50,7 @@ namespace AccesoDatos.Clases
         {
             SqlConnection conexion = new SqlConnection(CadenaConex);
             string sql = "";
-            sql = "select cedula as Cédulas, upper(apellido+ ' ' + nombre) as [Nombres Completos], fechadenacimiento as [Fechas de nacimiento], peso as Peso ";
+            sql = "select cedula as Cédulas, upper(apellidos+ ' ' + nombres) as [Nombres Completos], fechaNacimiento as [Fechas de Nacimiento], peso as Peso ";
             sql += "from personas order by apellidos, nombres";
             SqlCommand comando = new SqlCommand(sql, conexion);
             SqlDataAdapter ad1 = new SqlDataAdapter(comando);
